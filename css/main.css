@@ -8,7 +8,7 @@ a {
   color: inherit;
 }
 
-header, h1, h2, ul {
+.worklist__title, .benefitslist__title, .benefitslist__text, header, h1, h2, ul {
   margin: 0;
   padding: 0;
 }
@@ -23,13 +23,18 @@ h2 {
   text-align: center;
 }
 
+.team__list, .benefitslist {
+  list-style: none;
+  text-decoration: none;
+}
+
 img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
     padding-left: 15px;
@@ -41,14 +46,12 @@ img {
 
 .benefitmenu {
   display: block;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 60px auto;
 }
 @media screen and (max-width: 480px) {
   .benefitmenu {
-    width: 480px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -64,4 +67,219 @@ img {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   margin: -1px;
+}
+
+.benefitslist {
+  display: block;
+  /* calc((100%-quantity of margins in line * margin) / quantity of lines)*/
+}
+@media screen and (min-width: 768px) {
+  .benefitslist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 480px) {
+  .benefitslist li {
+    width: calc((100% - 15px) / 1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefitslist li {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefitslist li {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: calc((100% - 90px) / 4);
+  }
+}
+.benefitslist li + li {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .benefitslist li:nth-child(2n) {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefitslist li:nth-child(2n+1) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefitslist li:last-child {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefitslist li:last-child {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefitslist li:nth-child(3n) {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
+.benefitslist__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F5F4FA;
+}
+.benefitslist__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 480px) {
+  .benefitslist__title {
+    text-align: center;
+  }
+}
+.benefitslist__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7em;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.workmenu {
+  padding-bottom: 94px;
+}
+@media screen and (max-width: 1200px) {
+  .workmenu {
+    display: none;
+  }
+}
+
+.worklist__title {
+  color: #212121;
+  margin-bottom: 50px;
+}
+.worklist__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.worklist__box li + li {
+  margin-left: 30px;
+}
+.worklist__item {
+  position: relative;
+  list-style: none;
+}
+.worklist__item:hover, .worklist__item:focus {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.worklist__name {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 70px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.teammenu {
+  background-color: #F5F4FA;
+}
+@media screen and (max-width: 1199px) {
+  .teammenu {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .teammenu {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team__name {
+  margin-bottom: 30px;
+  display: block;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team__name {
+    margin-bottom: 50px;
+  }
+}
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* calc((100%-quantity of margins in line * margin) / quantity of lines)*/
+}
+@media screen and (max-width: 480px) {
+  .team__list {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%;
+  }
+}
+.team__list li + li {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team__list li + li {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list li:nth-child(2n) {
+    margin-left: 30px;
+  }
 }/*# sourceMappingURL=main.css.map */

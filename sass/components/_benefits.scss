@@ -1,12 +1,10 @@
 .benefitmenu {
     display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 60px auto;
 
     @media screen and (max-width: 480px) {
-        width: 480px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }
 
@@ -23,19 +21,68 @@
     margin: -1px; 
 }
 
-
-
 .benefitslist {
     display: block;
     @extend %liststyle-textdecoration;
 
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+   /* calc((100%-quantity of margins in line * margin) / quantity of lines)*/
+
+    & li {
+        @media screen and (max-width: 480px) {
+            width: calc((100% - 1 * 15px) / 1);
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 2 * 30px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+            width: calc((100% - 3 * 30px) / 4);
+        }
+    }
+
     & li + li {
-        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    & li:nth-child(2n) {
+        @media screen and (min-width: 768px) {
+            margin-left: 30px;
+            margin-top: 0;
+        }
+    }
+
+    & li:nth-child(2n+1) {
+        @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    & li:last-child {
+        @media screen and (min-width: 768px) {
+            margin-top: 30px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 0;
+        }
+    }
+
+    & li:nth-child(3n) {
+        @media screen and (min-width: 1200px) {
+            margin-left: 30px;
+            margin-top: 0;
+        }
     }
 
     &__icon {
         display: flex;
-        width: 270px;
         height: 120px;
         justify-content: center;
         align-items: center;
@@ -54,6 +101,10 @@
         text-transform: uppercase;
         margin-bottom:10px;
         margin-top: 30px;
+
+        @media screen and (max-width: 480px) {
+            text-align: center;
+        }
     }
 
     &__text {

@@ -1,0 +1,61 @@
+.teammenu {
+    background-color: $background-color;
+
+    @media screen and (max-width: 1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.team {
+    &__name {
+        margin-bottom: 30px;
+        display: block;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__list {
+        @extend %liststyle-textdecoration;
+        display: flex;
+
+        @media screen and (max-width: 480px) {
+            display: block;
+        }
+
+         /* calc((100%-quantity of margins in line * margin) / quantity of lines)*/
+
+        @media screen and (min-width: 768px) {
+            flex-wrap: wrap;
+            width: calc((100% - 2 * 30px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+    }
+
+    &__list li+li {
+        margin-top: 30px;
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 30px;
+            margin-top: 0;
+        }
+    }
+
+    &__list li:nth-child(2n) {
+        @media screen and (min-width: 768px) {
+            margin-left: 30px;
+        }
+    }
+}
