@@ -1,6 +1,13 @@
 .benefitmenu {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 480px) {
+        width: 480px;
+    }
 }
 
 .visually-hidden {
@@ -16,12 +23,14 @@
     margin: -1px; 
 }
 
+
+
 .benefitslist {
-    display: flex;
+    display: block;
     @extend %liststyle-textdecoration;
 
     & li + li {
-        margin-left: 30px;
+        margin-bottom: 30px;
     }
 
     &__icon {
