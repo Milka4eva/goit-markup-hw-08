@@ -396,6 +396,21 @@ img {
 .clients__item {
   display: block;
 }
+@media screen and (max-width: 480px) {
+  .clients__item {
+    width: 210px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .clients__item {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: 170px;
+  }
+}
 .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
