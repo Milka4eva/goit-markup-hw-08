@@ -1,0 +1,27 @@
+body {
+    @extend %body;
+}
+
+a {
+    @extend %a;
+}
+
+h2 {
+    @extend %h2;
+}
+
+img {
+    @extend %img;
+}
+
+.container {
+    @extend %container;
+}
+
+header, h1, h2, ul {
+    @extend %titles;
+}
+
+@mixin animated($value) {
+    transition: $value 250ms $transition-cubic;
+}

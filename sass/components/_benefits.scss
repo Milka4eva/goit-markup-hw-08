@@ -1,0 +1,57 @@
+.benefitmenu {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px; 
+}
+
+.benefitslist {
+    display: flex;
+    @extend %liststyle-textdecoration;
+
+    & li + li {
+        margin-left: 30px;
+    }
+
+    &__icon {
+        display: flex;
+        width: 270px;
+        height: 120px;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color;
+    }
+
+    &__title, &__text {
+        @extend %titles;
+    }
+
+    &__title {
+        font-weight: $bold-font;
+        font-size: 14px;
+        line-height: 1.14em;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom:10px;
+        margin-top: 30px;
+    }
+
+    &__text {
+        font-weight: $regular-font;
+        font-size: 14px;
+        line-height: 1.7em;
+        letter-spacing: 0.03em;
+        color: $main-grey;
+    }
+}

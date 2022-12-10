@@ -1,0 +1,49 @@
+
+.clientsmenu {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients {
+    &__title {
+        margin-bottom: $h2-marginbtm;
+    }
+
+    &__list {
+        display:flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__link {
+        display:flex;
+        width: 170px;
+        height: 92px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $icon-fill;
+        border-radius: 4px;
+        @include animated(fill);
+    }
+
+    &__icon {
+        fill: $icon-fill;
+        @include animated(fill);
+    }
+
+    &__link &__icon {
+        @include animated(fill);
+    }
+
+    &__link:hover, &__link:focus {
+        border: 1px solid $main-blue;
+    }
+
+    &__link:hover &__icon, &__link:focus &__icon {
+        fill: $main-blue;
+    }
+}

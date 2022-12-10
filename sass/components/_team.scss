@@ -1,0 +1,93 @@
+.teammenu {
+    background-color: $background-color;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team {
+    &__name {
+        margin-bottom: 50px;
+        display: block;
+        text-align: center;
+    }
+
+    &__list {
+        @extend %liststyle-textdecoration;
+        display: flex;
+    }
+
+    &__list li+li {
+        margin-left: 30px;
+    }
+}
+
+.teamsection {
+    background-color: $main-white;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    &__div {
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+
+    &__member, &__position {
+        @extend %titles;
+    }
+
+    &__member {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    &__position {
+        font-weight: $regular-font;
+        font-size: 16px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        color: $main-grey;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        padding-bottom: 30px;
+        justify-content: center;
+        list-style: none;
+    }
+
+    &__link {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $main-white;
+        box-shadow: none;
+        @include animated(background-color);
+    }
+
+    &__link:hover, &__link:focus {
+        fill: $main-white;
+        background-color: $main-blue;
+    }
+
+    &__list li + li {
+        margin-left: 10px;
+    }
+
+    &__icon {
+        fill: $icon-fill;
+        @include animated(fill);
+    }
+
+    &__link:hover &__icon, &__link:focus &__icon {
+        fill: $main-white;
+    }
+}
