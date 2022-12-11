@@ -23,7 +23,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 768px) {
         margin-bottom: 60px;
     }
 
@@ -151,7 +151,6 @@ footer {
 }
 
 .footerform {
-    margin-left: auto;
     display: block;
 
     &__text {
@@ -165,12 +164,22 @@ footer {
         display: block;
         margin: 0;
         margin-bottom: 20px;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
     }
 
     &__box {
         display: flex;
         justify-content: center;
-        align-items: center;       
+        align-items: center;
+        
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__input {
