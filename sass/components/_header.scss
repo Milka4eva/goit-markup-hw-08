@@ -1,14 +1,61 @@
 header {
     border-bottom: $header-border;
+
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: background-color: rgba(0, 0, 0, 0.2);
+        overflow-y: scroll;
+    }
+
+    &__backdrop &__is-hidden {
+        display: none;
+    }
+
+    &__modal {
+        padding: 0;
+        margin: 0;
+        background-color: $main-white;
+
+        @media screen and (min-width: 480px) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 480px;
+        }
+    }
+
+    &__buttonclose {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .headerdiv {
     display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media screen and (min-width: 768px) {
+        gap: 96px;
+    }
 }
 
 .headernav {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        gap: 87px;
+    }    
+
+    &__buttonopen {
+        opacity: 1;
+    }
 }
 
 .headerlogo {
@@ -78,13 +125,28 @@ header {
 .contactsnav {
     @extend %liststyle-textdecoration;
     margin-left: auto;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @media screen and (min-width: 1200px) {
     display: inline-flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 30px;
+}
 
     & li + li {
         margin-left: 50px;
         
-        @media screen and (max-width: 480px) {
-            margin-left: none;
+        @media screen and (min-width: 768px) {
+            margin-left: 0;
         }
     }
 
@@ -100,6 +162,11 @@ header {
         padding-bottom: 32px;
         color: $main-grey;
         @include animated(color);
+
+        @media screen and (min-width: 768px) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 
     &__item:hover, &__item:focus {
@@ -126,3 +193,4 @@ header {
         color: $main-blue;
     }
 }
+

@@ -16,6 +16,7 @@
             <div class="container headerdiv">
             <nav class="headernav">
                 <a href="./index.html" class="headerlogo"><span class="headerlogo__web">Web</span>Studio</a>
+                <button class="headernav__buttonopen" type="button" data-modal-open>Open</button>
                 <ul class="headermenu">
                     <li><a class="headermenu__item headermenu__current" href="index.html">Студія</a></li>
                     <li><a class="headermenu__item" href="portfolio.html">Портфоліо</a></li>
@@ -44,6 +45,12 @@
                     </div>
                     </li>
             </ul>
+            <div class="header__backdrop header__is-hidden" data-modal>
+                <div class="header__modal">
+                    <button class="header__buttonclose" type="button" data-modal-close>Close</button>
+                    <p>Mobile Menu</p>
+                </div>
+            </div>
             </div>
         </header>
         <!--Шапка-->
