@@ -47,76 +47,77 @@ img {
 header {
   border-bottom: 1px solid #ECECEC;
   /*&__backdrop {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.2);
-          overflow-y: scroll;
-      }
-
-      &__backdrop &__is-hidden {
-          display: none;
-      }
-
-      &__modal {
-          padding: 0;
-          margin: 0;
-          background-color: $main-white;
-
-          @media screen and (min-width: 480px) {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              max-width: 480px;
-          }
-      }
-
-      &__buttonclose {
-          margin: 0;
-          padding: 0;
-      }
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      overflow-y: scroll;
   }
 
-  .headerdiv {
-      display: flex;
-      padding-left: 15px;
-      padding-right: 15px;
-
-      @media screen and (min-width: 768px) {
-          gap: 96px;
-      }
+  &__backdrop &__is-hidden {
+      display: none;
   }
 
-  .headernav {
-      display: flex;
-      align-items: center;
+  &__modal {
+      padding: 0;
+      margin: 0;
+      background-color: $main-white;
 
-      @media screen and (min-width: 768px) {
-          gap: 87px;
-      }    
-
-      /*&__buttonopen {
-          display: inline-flex;
-          margin: 0;
-          padding: 0;
-          border: none;
-          background-color: transparent;
-      }
-
-      &__buttonopen &__cross {
-          opacity: 0;
-      }
-
-      &__is-open &__cross {
-          opacity: 1;
-      }
-
-      &__is-open &__menu {
-          opacity: 0;
+      @media screen and (min-width: 480px) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 480px;
       }*/
+}
+
+.headerdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .headerdiv {
+    gap: 96px;
+  }
+}
+
+.headernav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*&__buttonopen {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+  }
+
+  &__buttonopen &__cross {
+      opacity: 0;
+  }
+
+  &__is-open &__cross {
+      opacity: 1;
+  }
+
+  &__is-open &__menu {
+      opacity: 0;
+  }*/
+}
+@media screen and (min-width: 768px) {
+  .headernav {
+    gap: 87px;
+  }
 }
 
 .headerlogo {
@@ -787,7 +788,7 @@ header {
   .team__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: calc((100% - 60px) / 2);
+    width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -795,6 +796,12 @@ header {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .team__list li {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 .team__list li + li {
@@ -932,14 +939,16 @@ header {
 .clients__item {
   display: block;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .clients__item {
     width: 210px;
+    margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .clients__item {
     width: 226px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -963,19 +972,8 @@ header {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 480px) {
-  .clients__link {
-    width: 210px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .clients__link {
-    width: 226px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .clients__link {
-    width: 170px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }

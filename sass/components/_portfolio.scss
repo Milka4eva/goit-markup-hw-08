@@ -26,15 +26,22 @@
 .projectmenu {
     list-style: none;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
+        justify-content: flex-start;
+        margin-bottom: 40px;
+        margin-left: 15px;
+    }
+
+    @media screen and (min-width: 768px) {
         margin-bottom: 30px;
+        justify-content: center;
     }
 
     @media screen and (min-width: 1200px) {
         margin-bottom: 50px;
+        justify-content: center;
     }
     
 
@@ -81,6 +88,11 @@
     }
 
     @media screen and (max-width: 768px) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    @media screen and (min-width: 768px) {
         width: calc((100% - 2 * 30px) / 2);
     }
 
@@ -88,9 +100,9 @@
         gap: 30px;
     }
 
-    &__item {
+    /*&__item {
         flex-basis: calc((100% - 60px) / 3);
-    }
+    }*/
 
     &__link {
         display: block;

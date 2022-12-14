@@ -47,76 +47,77 @@ img {
 header {
   border-bottom: 1px solid #ECECEC;
   /*&__backdrop {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.2);
-          overflow-y: scroll;
-      }
-
-      &__backdrop &__is-hidden {
-          display: none;
-      }
-
-      &__modal {
-          padding: 0;
-          margin: 0;
-          background-color: $main-white;
-
-          @media screen and (min-width: 480px) {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              max-width: 480px;
-          }
-      }
-
-      &__buttonclose {
-          margin: 0;
-          padding: 0;
-      }
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      overflow-y: scroll;
   }
 
-  .headerdiv {
-      display: flex;
-      padding-left: 15px;
-      padding-right: 15px;
-
-      @media screen and (min-width: 768px) {
-          gap: 96px;
-      }
+  &__backdrop &__is-hidden {
+      display: none;
   }
 
-  .headernav {
-      display: flex;
-      align-items: center;
+  &__modal {
+      padding: 0;
+      margin: 0;
+      background-color: $main-white;
 
-      @media screen and (min-width: 768px) {
-          gap: 87px;
-      }    
-
-      /*&__buttonopen {
-          display: inline-flex;
-          margin: 0;
-          padding: 0;
-          border: none;
-          background-color: transparent;
-      }
-
-      &__buttonopen &__cross {
-          opacity: 0;
-      }
-
-      &__is-open &__cross {
-          opacity: 1;
-      }
-
-      &__is-open &__menu {
-          opacity: 0;
+      @media screen and (min-width: 480px) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 480px;
       }*/
+}
+
+.headerdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .headerdiv {
+    gap: 96px;
+  }
+}
+
+.headernav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*&__buttonopen {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+  }
+
+  &__buttonopen &__cross {
+      opacity: 0;
+  }
+
+  &__is-open &__cross {
+      opacity: 1;
+  }
+
+  &__is-open &__menu {
+      opacity: 0;
+  }*/
+}
+@media screen and (min-width: 768px) {
+  .headernav {
+    gap: 87px;
+  }
 }
 
 .headerlogo {
@@ -303,18 +304,32 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .projectmenu {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 40px;
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
   .projectmenu {
     margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
   .projectmenu {
     margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .projectmenu li + li {
@@ -353,6 +368,9 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  /*&__item {
+      flex-basis: calc((100% - 60px) / 3);
+  }*/
 }
 @media screen and (max-width: 480px) {
   .projectlist {
@@ -363,6 +381,12 @@ header {
 }
 @media screen and (max-width: 768px) {
   .projectlist {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projectlist {
     width: calc((100% - 60px) / 2);
   }
 }
@@ -370,10 +394,6 @@ header {
   .projectlist {
     gap: 30px;
   }
-}
-.projectlist__item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
 }
 .projectlist__link {
   display: block;
