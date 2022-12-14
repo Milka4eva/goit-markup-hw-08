@@ -46,67 +46,77 @@ img {
 
 header {
   border-bottom: 1px solid #ECECEC;
-}
-header__backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  overflow-y: scroll;
-}
-header__backdrop header__is-hidden {
-  display: none;
-}
-header__modal {
-  padding: 0;
-  margin: 0;
-  background-color: #ffffff;
-}
-@media screen and (min-width: 480px) {
-  header__modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 480px;
-  }
-}
-header__buttonclose {
-  margin: 0;
-  padding: 0;
-}
+  /*&__backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.2);
+          overflow-y: scroll;
+      }
 
-.headerdiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media screen and (min-width: 768px) {
+      &__backdrop &__is-hidden {
+          display: none;
+      }
+
+      &__modal {
+          padding: 0;
+          margin: 0;
+          background-color: $main-white;
+
+          @media screen and (min-width: 480px) {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              max-width: 480px;
+          }
+      }
+
+      &__buttonclose {
+          margin: 0;
+          padding: 0;
+      }
+  }
+
   .headerdiv {
-    gap: 96px;
-  }
-}
+      display: flex;
+      padding-left: 15px;
+      padding-right: 15px;
 
-.headernav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .headernav {
-    gap: 87px;
+      @media screen and (min-width: 768px) {
+          gap: 96px;
+      }
   }
-}
-.headernav__buttonopen {
-  opacity: 1;
+
+  .headernav {
+      display: flex;
+      align-items: center;
+
+      @media screen and (min-width: 768px) {
+          gap: 87px;
+      }    
+
+      /*&__buttonopen {
+          display: inline-flex;
+          margin: 0;
+          padding: 0;
+          border: none;
+          background-color: transparent;
+      }
+
+      &__buttonopen &__cross {
+          opacity: 0;
+      }
+
+      &__is-open &__cross {
+          opacity: 1;
+      }
+
+      &__is-open &__menu {
+          opacity: 0;
+      }*/
 }
 
 .headerlogo {

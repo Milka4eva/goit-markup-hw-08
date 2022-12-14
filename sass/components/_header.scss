@@ -1,13 +1,13 @@
 header {
     border-bottom: $header-border;
 
-    &__backdrop {
+    /*&__backdrop {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.2);
         overflow-y: scroll;
     }
 
@@ -26,7 +26,7 @@ header {
             left: 50%;
             transform: translate(-50%, -50%);
             max-width: 480px;
-        }
+        }*/
     }
 
     &__buttonclose {
@@ -53,9 +53,25 @@ header {
         gap: 87px;
     }    
 
-    &__buttonopen {
+    /*&__buttonopen {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__buttonopen &__cross {
+        opacity: 0;
+    }
+
+    &__is-open &__cross {
         opacity: 1;
     }
+
+    &__is-open &__menu {
+        opacity: 0;
+    }*/
 }
 
 .headerlogo {

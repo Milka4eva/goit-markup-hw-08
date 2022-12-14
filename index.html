@@ -16,7 +16,12 @@
             <div class="container headerdiv">
             <nav class="headernav">
                 <a href="./index.html" class="headerlogo"><span class="headerlogo__web">Web</span>Studio</a>
-                <button class="headernav__buttonopen" type="button" data-modal-open>Open</button>
+                <button class="headernav__buttonopen headernav__is-open" type="button">
+                    <svg width="40px" height="40px" aria-label="mobile menu switch">
+                        <use class="headernav__menu" href="./images/symbol-def.svg#menu"></use>
+                        <use class="headernav__cross" href="./images/symbol-defs.svg#close"></use>
+                    </svg>
+                </button>
                 <ul class="headermenu">
                     <li><a class="headermenu__item headermenu__current" href="index.html">Студія</a></li>
                     <li><a class="headermenu__item" href="portfolio.html">Портфоліо</a></li>
@@ -47,8 +52,7 @@
             </ul>
             <div class="header__backdrop header__is-hidden" data-modal>
                 <div class="header__modal">
-                    <button class="header__buttonclose" type="button" data-modal-close>Close</button>
-                    <p>Mobile Menu</p>
+                    <button class="header__buttonclose" type="button">Close</button>
                 </div>
             </div>
             </div>
@@ -92,7 +96,7 @@
                             <div class="modal__agreement">
                                 <label class="modal__agreelabel">
                                     <input class="modal__checkbox" type="checkbox" name="agreement"/>
-                                    <span class="modal__checkitem"><svg class="modal__agreeicon" width="16" height="15"><use href="./images/defs.svg#icon-check"></use></svg></span>
+                                    <span class="modal__checkitem"><svg class="modal__agreeicon" width="16" height="15"><use href="./images/symbol-def.svg#Vector"></use></svg></span>
                                     <p class="modal__agreetext">Погоджуюся з розсилкою та приймаю <a class="modal__agreelink" href="">Умови договору</a></p>
                                 </label>
                             </div>
