@@ -27,6 +27,7 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 1199px) {
         margin-bottom: 30px;
