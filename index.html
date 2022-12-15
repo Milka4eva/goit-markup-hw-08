@@ -16,7 +16,7 @@
             <div class="container headerdiv">
             <nav class="headernav">
                 <a href="./index.html" class="headerlogo"><span class="headerlogo__web">Web</span>Studio</a>
-                <button class="headernav__buttonopen headernav__is-open" type="button">
+                <button class="headernav__buttonopen js-open-menu" aria-expanded="false" aria-controls="header__mobilemenu" type="button">
                     <svg width="40px" height="40px" aria-label="mobile menu switch">
                         <use class="headernav__menu" href="./images/symbol-def.svg#menu"></use>
                         <use class="headernav__cross" href="./images/symbol-defs.svg#close"></use>
@@ -50,10 +50,43 @@
                     </div>
                     </li>
             </ul>
-            <div class="header__backdrop header__is-hidden" data-modal>
+            <div class="backdrop is-hidden js-menu-container" id="header__mobilemenu">
                 <div class="header__modal">
-                    <button class="header__buttonclose" type="button">Close</button>
-                </div>
+                    <button class="header__buttonclose js-close-menu" type="button">Close</button>
+                    <ul class="header__mobilemenu">
+                        <li>
+                            <div class="header__mobilenav">
+                                <ul class="header__mobilemenulist">
+                                    <li><a class="header__mobilemenuitem header__mobilecurrent" href="index.html">Студія</a></li>
+                                    <li><a class="header__mobilemenuitem" href="portfolio.html">Портфоліо</a></li>
+                                    <li><a class="header__mobilemenuitem" href="">Контакти</a></li>
+                                </ul>
+                            </div>                        
+                        </li>
+                        <li>
+                            <div class="header__mobilecontacts">
+                                <ul class="header__mobilecontactslist">
+                                    <li><a class="header__mobilephone" href="tel:+380961111111">
+                                        +38 096 111 11 11</a>
+                                    </li>
+                                    <li><a class="header__mobileemail" href="mailto:info@devstudio.com">
+                                        info@devstudio.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="header__mobilesocial">
+                                <ul class="header__mobilesociallist">
+                                    <li class="header__mobilesociallink"><a href="#">Instagram</a></li>
+                                    <li class="header__mobilesociallink"><a href="#">Twitter</a></li>
+                                    <li class="header__mobilesociallink"><a href="#">Facebook</a></li>
+                                    <li class="header__mobilesociallink"><a href="#">LinkedIn</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
             </div>
             </div>
         </header>
@@ -348,6 +381,7 @@
             </div>
         </div>
         </footer>
+        <script defer="" src=".js/mobile-menu.js"></script>
         <script src="./js/modal.js"></script>
     </body>
 </html>

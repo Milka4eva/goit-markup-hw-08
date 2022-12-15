@@ -1,16 +1,6 @@
 header {
     border-bottom: $header-border;
 
-    /*&__backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-        overflow-y: scroll;
-    }
-
     &__backdrop &__is-hidden {
         display: none;
     }
@@ -26,8 +16,113 @@ header {
             left: 50%;
             transform: translate(-50%, -50%);
             max-width: 480px;
-        }*/
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
+
+    &__buttonclose:hover, &__buttonclose:focus {
+        fill: $main-blue;
+    }
+
+    &__mobilemenulist {
+        @extend %liststyle-textdecoration;
+        margin-top: 48px;
+        margin-left: 40px;
+    }
+
+    &__mobilemenulist li + li {
+        margin-top: 32px;
+    }
+
+    &__mobilemenuitem {
+        color: $main-blackish;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+    }
+
+    &__mobilecurrent {
+        color: $main-blue;
+    }
+
+    &__mobilecontacts {
+        margin-top: 302px;
+        margin-left: 40px;
+    }
+
+    &__mobilecontactslist {
+        @extend %liststyle-textdecoration;
+    }
+
+    &__mobilephone {
+        margin-bottom: 32px;
+        color: $main-blue;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.17;
+    }
+
+    &__mobileemail {
+        margin-bottom: 64px;
+        color: $main-grey;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+    }
+
+    &__mobilesocial {
+        display: flex;
+        margin-left: 40px;
+        justify-content: flex-start;
+    }
+
+    &__mobilesociallist {
+        @extend %liststyle-textdecoration;
+    }
+
+    &__mobilesociallink {
+        color: $main-blue;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    &__mobilesociallink::after {
+        content: "";
+        display: block;
+        height: 22px;
+        width: 100%;
+        background: rgba(33, 33, 33, 0.2);
+        border: 1px solid;
+        border-radius: 2px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    @include animated(opacity);
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
 
 .headerdiv {
     display: flex;
@@ -47,16 +142,23 @@ header {
         gap: 87px;
     }    
 
-    /*&__buttonopen {
+    &__buttonopen {
         display: inline-flex;
         margin: 0;
         padding: 0;
         border: none;
         background-color: transparent;
+        margin-left: 276px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 
     &__buttonopen &__cross {
-        opacity: 0;
+        opacity: 1;
     }
 
     &__is-open &__cross {
@@ -64,8 +166,8 @@ header {
     }
 
     &__is-open &__menu {
-        opacity: 0;
-    }*/
+        opacity: 1;
+    }
 }
 
 .headerlogo {
@@ -86,6 +188,10 @@ header {
 .headermenu {
     @extend %liststyle-textdecoration;
     display: flex;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 
     @media screen and (min-width: 1200px) {
         margin-left: 93px;
@@ -135,6 +241,10 @@ header {
 .contactsnav {
     @extend %liststyle-textdecoration;
     margin-left: auto;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         display: flex;
