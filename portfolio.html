@@ -16,6 +16,11 @@
             <div class="container headerdiv">
             <nav class="headernav">
                 <a href="./index.html" class="headerlogo"><span class="headerlogo__web">Web</span>Studio</a>
+                <button class="headernav__buttonopen menu-toggle js-open-menu" aria-expanded="false" aria-controls="header__mobilemenu" type="button">
+                    <svg width="40px" height="40px" aria-label="mobile menu switch">
+                        <use class="headernav__menu" href="./images/symbol-def.svg#menu"></use>
+                    </svg>
+                </button>
                 <ul class="headermenu">
                     <li><a class="headermenu__item" href="index.html">Студія</a></li>
                     <li><a class="headermenu__item headermenu__current" href="portfolio.html">Портфоліо</a></li>
@@ -23,27 +28,69 @@
                 </ul>
             </nav>
             <ul class="contactsnav">
-                <li>
+                    <li>
                     <div>
-                    <a class="contactsnav__item" href="mailto:info@devstudio.com">
-                        <svg class="contactsnav__email" width="16px" height="12px">
-                            <use href="./images/symbols.svg#envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
+                        <a class="contactsnav__item" href="mailto:info@devstudio.com">
+                            <svg class="contactsnav__email" width="16px" height="12px">
+                                <use href="./images/symbols.svg#envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
                     </div>
-                </li>
-                <li>
+                    </li>
+                    <li>
                     <div>
-                    <a class="contactsnav__item" href="tel:+380961111111">
-                        <svg class="contactsnav__smartphone" width="10px" height="16px">
-                            <use href="./images/symbols.svg#smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
+                        <a class="contactsnav__item" href="tel:+380961111111">
+                            <svg class="contactsnav__smartphone" width="10px" height="16px">
+                                <use href="./images/symbols.svg#smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
                     </div>
-                </li>
+                    </li>
             </ul>
+            <div class="backdrop is-hidden">
+                <div class="header__modal js-menu-container is-open" id="header__mobilemenu">
+                    <button class="header__buttonclose menu-toggle js-close-menu" type="button">
+                        <svg width="40px" height="40px" aria-label="mobile menu switch">
+                           <use class="headernav__cross" href="./images/symbol-defs.svg#close"></use>
+                        </svg>
+                    </button>
+                    <ul class="header__mobilemenu">
+                        <li>
+                            <div class="header__mobilenav">
+                                <ul class="header__mobilemenulist">
+                                    <li><a class="header__mobilemenuitem" href="index.html">Студія</a></li>
+                                    <li><a class="header__mobilemenuitem header__mobilecurrent" href="portfolio.html">Портфоліо</a></li>
+                                    <li><a class="header__mobilemenuitem" href="">Контакти</a></li>
+                                </ul>
+                            </div>                        
+                        </li>
+                        <li>
+                            <div class="header__mobilecontacts">
+                                <ul class="header__mobilecontactslist">
+                                    <li><a class="header__mobilephone" href="tel:+380961111111">
+                                        +38 096 111 11 11</a>
+                                    </li>
+                                    <li><a class="header__mobileemail" href="mailto:info@devstudio.com">
+                                        info@devstudio.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="header__mobilesocial">
+                                <ul class="header__mobilesociallist">
+                                    <li class="header__mobilesociallink"><a href="#">Instagram</a></li>
+                                    <li class="header__mobilesociallink"><a href="#">Twitter</a></li>
+                                    <li class="header__mobilesociallink"><a href="#">Facebook</a></li>
+                                    <li class="header__mobilesociallink"><a href="#">LinkedIn</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
             </div>
         </header>
     <!--Шапка-->
@@ -62,7 +109,8 @@
             <ul class="projectlist">
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio01.jpg" width="370" height="294" alt="Технокряк">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_01_1x.jpg 1x, ./images/img-a_01_2x.jpg 2x" src="./images/portfolio01.jpg" width="370" height="294" alt="Технокряк">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -73,7 +121,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio02.jpg" width="370" height="294" alt="Постер New Orlean vs Golden Star">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_02_1x.jpg 1x, ./images/img-a_02_2x.jpg 2x" src="./images/portfolio02.jpg" width="370" height="294" alt="Постер New Orlean vs Golden Star">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -84,7 +133,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio03.jpg" width="370" height="294" alt="Ресторан Seafood">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_03_1x.jpg 1x, ./images/img-a_03_2x.jpg 2x" src="./images/portfolio03.jpg" width="370" height="294" alt="Ресторан Seafood">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -95,7 +145,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio04.jpg" width="370" height="294" alt="Проєкт Prime">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_04_1x.jpg 1x, ./images/img-a_04_2x.jpg 2x" src="./images/portfolio04.jpg" width="370" height="294" alt="Проєкт Prime">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -106,7 +157,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio05.jpg" width="370" height="294" alt="Проєкт Boxes">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_05_1x.jpg 1x, ./images/img-a_05_2x.jpg 2x" src="./images/portfolio05.jpg" width="370" height="294" alt="Проєкт Boxes">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -117,7 +169,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio06.jpg" width="370" height="294" alt="Inspiration has no Borders">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_06_1x.jpg 1x, ./images/img-a_06_2x.jpg 2x" src="./images/portfolio06.jpg" width="370" height="294" alt="Inspiration has no Borders">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -128,7 +181,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio07.jpg" width="370" height="294" alt="Видання Limited Edition">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_07_1x.jpg 1x, ./images/img-a_07_2x.jpg 2x" src="./images/portfolio07.jpg" width="370" height="294" alt="Видання Limited Edition">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -139,7 +193,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio08.jpg" width="370" height="294" alt="Проєкт Lab">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_08_1x.jpg 1x, ./images/img-a_08_2x.jpg 2x" src="./images/portfolio08.jpg" width="370" height="294" alt="Проєкт Lab">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
@@ -150,7 +205,8 @@
                 </li>
                 <li class="projectlist__item"><a class="projectlist__link" href="">
                     <div class="projectlist__thumb">
-                        <img class="projectlist__image" src="./images/portfolio09.jpg" width="370" height="294" alt="Growing Business">
+                        <img class="projectlist__image" 
+                        srcset="./images/img-a_09_1x.jpg 1x, ./images/img-a_09_2x.jpg 2x" src="./images/portfolio09.jpg" width="370" height="294" alt="Growing Business">
                         <div class="projectlist__overlay"><p class="projectlist__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                     </div>
                     <div class="projectlist__flex">
