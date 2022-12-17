@@ -139,28 +139,26 @@ header__mobilesociallink::after {
   margin-right: 10px;
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (min-width: 768px) {
-  .backdrop {
-    display: none;
-  }
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+/*.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    @include animated(opacity);
 
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}*/
 .headerdiv {
   display: -webkit-box;
   display: -ms-flexbox;
