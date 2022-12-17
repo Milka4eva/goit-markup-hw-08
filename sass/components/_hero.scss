@@ -4,14 +4,19 @@
 
 .overlay {
     width: 100%;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 116px;
+    padding-bottom: 116px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background\ hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 
     @media screen and (min-width: 1200px) {
         height: 600px;
@@ -21,12 +26,16 @@
 
 .maintitle {
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.37em;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $main-white;
     margin: 0px auto 30px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 44px;
+    }
 
     @media screen and (min-width: 1200px) {
         width: 696px;

@@ -1,12 +1,16 @@
 .modal {
     background-color: $main-white;
-    width: 528px;
+    width: 450px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms $transition-cubic;
     padding: 40px;
+
+    @media screen and (min-width: 768px) {
+        width: 528px;
+    }
 
     &__button {
         background-color: $main-white;
