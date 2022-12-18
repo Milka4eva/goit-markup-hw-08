@@ -23,7 +23,7 @@ h2 {
   text-align: center;
 }
 
-.footeraddress__list, .team__list, .benefitslist, .contactsnav__item, .contactsnav, .headermenu__item, .headermenu, header__mobilesociallist, header__mobilecontactslist, header__mobilemenulist {
+.footeraddress__list, .team__list, .benefitslist, .contactsnav__item, .contactsnav, .headermenu__item, .headermenu {
   list-style: none;
   text-decoration: none;
 }
@@ -47,118 +47,7 @@ img {
 header {
   border-bottom: 1px solid #ECECEC;
 }
-@media screen and (max-width: 767px) {
-  header__modal {
-    padding: 0;
-    margin: 0;
-    background-color: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 999;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 250ms ease-in-out;
-    transition: -webkit-transform 250ms ease-in-out;
-    transition: transform 250ms ease-in-out;
-    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  }
-}
-@media screen and (min-width: 768px) {
-  header__modal {
-    display: none;
-  }
-}
-header__modal__modal.is-open {
-  -webkit-transform: translate(0);
-          transform: translate(0);
-}
-header__buttonclose:hover, header__buttonclose:focus {
-  fill: #2196F3;
-}
-header__mobilemenulist {
-  margin-top: 48px;
-  margin-left: 40px;
-}
-header__mobilemenulist li + li {
-  margin-top: 32px;
-}
-header__mobilemenuitem {
-  color: #212121;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
-}
-header__mobilecurrent {
-  color: #2196F3;
-}
-header__mobilecontacts {
-  margin-top: 302px;
-  margin-left: 40px;
-}
-header__mobilephone {
-  margin-bottom: 32px;
-  color: #2196F3;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
-}
-header__mobileemail {
-  margin-bottom: 64px;
-  color: #757575;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-}
-header__mobilesocial {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 40px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-header__mobilesociallink {
-  color: #2196F3;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.2;
-}
-header__mobilesociallink::after {
-  content: "";
-  display: block;
-  height: 22px;
-  width: 100%;
-  background: rgba(33, 33, 33, 0.2);
-  border: 1px solid;
-  border-radius: 2px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
 
-/*.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.2);
-    overflow-y: scroll;
-    @include animated(opacity);
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-
-    &.is-hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
-}*/
 .headerdiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,32 +73,6 @@ header__mobilesociallink::after {
   .headernav {
     gap: 87px;
   }
-}
-.headernav__buttonopen {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  margin-left: 276px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-@media screen and (min-width: 768px) {
-  .headernav__buttonopen {
-    display: none;
-  }
-}
-.headernav__buttonopen .headernav__cross {
-  opacity: 0;
-}
-.is-open .headernav__cross {
-  opacity: 1;
-}
-.is-open .headernav__menu {
-  opacity: 0;
 }
 
 .headerlogo {
@@ -283,6 +146,24 @@ header__mobilesociallink::after {
   border: 1px solid;
   border-radius: 2px;
   margin-top: 28px;
+}
+
+.menu-toggle.js-open-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: 276px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .menu-toggle.js-open-menu {
+    display: none;
+  }
 }
 
 .contactsnav {

@@ -10,23 +10,23 @@
 <link rel="stylesheet" href="css/main.min.css">      
 <title>Головна</title>
     </head>
-    <body style>
+    <body>
         <!--Верхня лінія-->
         <header>
             <div class="container headerdiv">
             <nav class="headernav">
                 <a href="./index.html" class="headerlogo"><span class="headerlogo__web">Web</span>Studio</a>
-                <button class="headernav__buttonopen menu-toggle js-open-menu" aria-expanded="false" aria-controls="header__mobilemenu" type="button">
-                    <svg width="40px" height="40px" aria-label="mobile menu switch">
-                        <use class="headernav__menu" href="./images/symbol-0defs.svg#menu_40px"></use>
-                    </svg>
-                </button>
                 <ul class="headermenu">
                     <li><a class="headermenu__item headermenu__current" href="index.html">Студія</a></li>
                     <li><a class="headermenu__item" href="portfolio.html">Портфоліо</a></li>
                     <li><a class="headermenu__item" href="">Контакти</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40px" height="40px">
+                    <use class="burger__menu" href="./images/symbol-0defs.svg#menu_40px"></use>
+                </svg>
+            </button>
             <ul class="contactsnav">
                     <li>
                     <div>
@@ -49,48 +49,6 @@
                     </div>
                     </li>
             </ul>
-            <div class="backdrop is-hidden">
-                <div class="header__modal js-menu-container is-open" id="header__mobilemenu">
-                    <button class="header__buttonclose menu-toggle js-close-menu" type="button">
-                        <svg width="40px" height="40px" aria-label="mobile menu switch">
-                           <use class="headernav__cross" href="./images/symbol-defs.svg#close"></use>
-                        </svg>
-                    </button>
-                    <ul class="header__mobilemenu">
-                        <li>
-                            <div class="header__mobilenav">
-                                <ul class="header__mobilemenulist">
-                                    <li><a class="header__mobilemenuitem header__mobilecurrent" href="index.html">Студія</a></li>
-                                    <li><a class="header__mobilemenuitem" href="portfolio.html">Портфоліо</a></li>
-                                    <li><a class="header__mobilemenuitem" href="">Контакти</a></li>
-                                </ul>
-                            </div>                        
-                        </li>
-                        <li>
-                            <div class="header__mobilecontacts">
-                                <ul class="header__mobilecontactslist">
-                                    <li><a class="header__mobilephone" href="tel:+380961111111">
-                                        +38 096 111 11 11</a>
-                                    </li>
-                                    <li><a class="header__mobileemail" href="mailto:info@devstudio.com">
-                                        info@devstudio.com</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="header__mobilesocial">
-                                <ul class="header__mobilesociallist">
-                                    <li class="header__mobilesociallink"><a href="#">Instagram</a></li>
-                                    <li class="header__mobilesociallink"><a href="#">Twitter</a></li>
-                                    <li class="header__mobilesociallink"><a href="#">Facebook</a></li>
-                                    <li class="header__mobilesociallink"><a href="#">LinkedIn</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
             </div>
         </header>
         <!--Шапка-->
@@ -391,6 +349,46 @@
             </div>
         </div>
         </footer>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+                <svg width="40px" height="40px">
+                   <use class="menu__cross" href="./images/symbol-defs.svg#close"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu">
+                    <li>
+                        <div class="mobilenav">
+                            <ul class="mobilemenulist">
+                                <li><a class="mobilemenuitem mobilecurrent" href="index.html">Студія</a></li>
+                                <li><a class="mobilemenuitem" href="portfolio.html">Портфоліо</a></li>
+                                <li><a class="mobilemenuitem" href="">Контакти</a></li>
+                            </ul>
+                        </div>                        
+                    </li>
+                    <li>
+                        <div class="mobilecontacts">
+                            <ul class="mobilecontactslist">
+                                <li><a class="mobilephone" href="tel:+380961111111">
+                                    +38 096 111 11 11</a>
+                                </li>
+                                <li><a class="mobileemail" href="mailto:info@devstudio.com">
+                                    info@devstudio.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mobilesocial">
+                            <ul class="mobilesociallist">
+                                <li class="mobilesociallink"><a href="#">Instagram</a></li>
+                                <li class="mobilesociallink"><a href="#">Twitter</a></li>
+                                <li class="mobilesociallink"><a href="#">Facebook</a></li>
+                                <li class="mobilesociallink"><a href="#">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </li>
+            </ul>
+        </div>
         <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
         <script defer="" src=".js/mobile-menu.js"></script>
         <script src="./js/modal.js"></script>

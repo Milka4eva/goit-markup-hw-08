@@ -1,0 +1,102 @@
+.menu-container {
+    @media screen and (max-width: 767px) {
+    padding: 0;
+    margin: 0;
+    background-color: $main-white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+&.is-open {
+    transform: translate(0);
+}
+}
+
+.js-close-menu:hover, .js-close-menu:focus {
+    fill: $main-blue;
+}
+
+.mobilemenulist {
+    @extend %liststyle-textdecoration;
+    margin-top: 48px;
+    margin-left: 40px;
+}
+
+.mobilemenulist li + li {
+    margin-top: 32px;
+}
+
+.mobilemenuitem {
+    color: $main-blackish;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+}
+
+.mobilecurrent {
+    color: $main-blue;
+}
+
+.mobilecontacts {
+    margin-top: 302px;
+    margin-left: 40px;
+}
+
+.mobilecontactslist {
+    @extend %liststyle-textdecoration;
+}
+
+.mobilephone {
+    margin-bottom: 32px;
+    color: $main-blue;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+}
+
+.mobileemail {
+    margin-bottom: 64px;
+    color: $main-grey;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+}
+
+.mobilesocial {
+    display: flex;
+    margin-left: 40px;
+    justify-content: flex-start;
+}
+
+.mobilesociallist {
+    @extend %liststyle-textdecoration;
+}
+
+.mobilesociallink {
+    color: $main-blue;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.mobilesociallink::after {
+    content: "";
+    display: block;
+    height: 22px;
+    width: 100%;
+    background: rgba(33, 33, 33, 0.2);
+    border: 1px solid;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
