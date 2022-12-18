@@ -555,12 +555,12 @@ header {
     gap: 30px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .projectlist__item {
     width: 450px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .projectlist__item {
     display: -webkit-box;
     display: -ms-flexbox;
