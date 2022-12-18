@@ -561,7 +561,7 @@ header {
     width: 450px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 767px) and (max-width: 768px) {
   .projectlist__item {
     display: -webkit-box;
     display: -ms-flexbox;
