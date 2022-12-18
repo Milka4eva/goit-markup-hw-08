@@ -24,6 +24,7 @@
 .benefitslist {
     display: block;
     @extend %liststyle-textdecoration;
+    width: 100%;
 
     @media screen and (min-width: 768px) {
         display: flex;
@@ -56,12 +57,6 @@
         @media screen and (min-width: 768px) {
             margin-left: 30px;
             margin-top: 0;
-        }
-    }
-
-    & li:nth-child(2n+1) {
-        @media screen and (min-width: 768px) {
-            margin-bottom: 30px;
         }
     }
 

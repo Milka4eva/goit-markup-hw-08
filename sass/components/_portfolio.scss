@@ -31,6 +31,8 @@
     @media screen and (max-width: 767px) {
         justify-content: flex-start;
         margin-bottom: 40px;
+        gap: 15px 8px;
+        width: 100%;
         margin-left: 15px;
     }
 
@@ -42,11 +44,6 @@
     @media screen and (min-width: 1200px) {
         margin-bottom: 50px;
         justify-content: center;
-    }
-    
-
-    & li + li {
-        margin-left: 8px;
     }
 
     &__button {
@@ -82,9 +79,9 @@
     @extend %liststyle-textdecoration;
 
     @media screen and (max-width: 480px) {
-        display: block;
-        margin-bottom: 30px;
-        width: calc((100% - 1 * 15px) / 1);
+        display: flex;
+        gap: 30px;
+        justify-content: center;
     }
 
     @media screen and (max-width: 1199px) {
@@ -94,6 +91,17 @@
 
     @media screen and (min-width: 768px) {
         gap: 30px;
+    }
+
+    &__item {
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
+        
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-basis: calc((100% - 30px) / 2);
+        }
     }
 
     &__link {
@@ -117,7 +125,7 @@
         width: 100%;
         height: 100%;
         background-color: rgba(33, 150, 243, 0.9);
-        transform: translateY(100%);
+        transform: translateY(101%);
         @include animated(transform);
     }
     
@@ -140,6 +148,12 @@
         padding-right: 24px;
         border: 1px solid #EEEEEE;
         border-top: none;
+    }
+
+    &__first {
+        @media screen and (min-width: 768px) {
+            padding-bottom: 56px;
+        }
     }
     
     &__title, &_category {

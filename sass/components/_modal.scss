@@ -165,6 +165,11 @@
         bottom: 17%;
         right: 94%;
         @include animated(fill);
+
+        @media screen and (max-width: 767px) {
+            bottom: 17%;
+            right: 91%;
+        }
     }
     
     &__input:hover + &__icon,
