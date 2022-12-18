@@ -1,7 +1,4 @@
 .menu-container {
-    @media screen and (max-width: 767px) {
-    padding: 0;
-    margin: 0;
     background-color: $main-white;
     position: fixed;
     top: 0;
@@ -11,15 +8,37 @@
     z-index: 999;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
-    }
 
     @media screen and (min-width: 768px) {
         display: none;
     }
 
-&.is-open {
-    transform: translate(0);
+    &.is-open {
+        transform: translateX(0);
+    }
 }
+
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+.js-close-menu {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: $main-blackish;
+    border: none;
+    background-color: $main-white;
 }
 
 .js-close-menu:hover, .js-close-menu:focus {
@@ -30,6 +49,7 @@
     @extend %liststyle-textdecoration;
     margin-top: 48px;
     margin-left: 40px;
+    margin-bottom: 252px;
 }
 
 .mobilemenulist li + li {
@@ -48,16 +68,18 @@
 }
 
 .mobilecontacts {
-    margin-top: 302px;
     margin-left: 40px;
+    margin-bottom: 64px;
 }
 
 .mobilecontactslist {
     @extend %liststyle-textdecoration;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
 }
 
 .mobilephone {
-    margin-bottom: 32px;
     color: $main-blue;
     font-weight: 500;
     font-size: 34px;
@@ -65,7 +87,6 @@
 }
 
 .mobileemail {
-    margin-bottom: 64px;
     color: $main-grey;
     font-weight: 500;
     font-size: 24px;
@@ -75,11 +96,16 @@
 .mobilesocial {
     display: flex;
     margin-left: 40px;
-    justify-content: flex-start;
+    margin-bottom: 48px;
+    margin-top: 64px;
+    @extend %liststyle-textdecoration;
 }
 
 .mobilesociallist {
     @extend %liststyle-textdecoration;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .mobilesociallink {
@@ -91,11 +117,10 @@
 
 .mobilesociallink::after {
     content: "";
-    display: block;
+    display: inline-flex;
     height: 22px;
-    width: 100%;
-    background: rgba(33, 33, 33, 0.2);
-    border: 1px solid;
+    background-color: rgba(33, 33, 33, 0.2);
+    border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 2px;
     margin-left: 10px;
     margin-right: 10px;
