@@ -27,6 +27,10 @@
         display: flex;
         gap: 30px;
         list-style: none;
+
+        @media screen and (max-width: 1199px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
@@ -41,7 +45,7 @@
         }
 
         @media screen and (min-width: 1200px) {
-            flex-basis: calc((100%-150px) / 6);
+            flex-basis: calc((100% - 150px) / 6);
     }
 }
 
