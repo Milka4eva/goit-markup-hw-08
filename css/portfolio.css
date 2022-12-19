@@ -608,7 +608,7 @@ header {
   border: 1px solid #EEEEEE;
   border-top: none;
 }
-@media screen and (min-width: 767px) and (max-width: 1199) {
+@media screen and (min-width: 767px) and (max-width: 1199px) {
   .projectlist__first {
     padding-bottom: 56px;
   }
