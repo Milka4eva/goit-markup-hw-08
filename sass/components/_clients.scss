@@ -24,12 +24,9 @@
     }
 
     &__list {
-        display:flex;
+        display: flex;
         gap: 30px;
-        flex-wrap: wrap;
         list-style: none;
-        justify-content: center;
-        width: 100%;
     }
 
     &__item {
@@ -44,7 +41,7 @@
         }
 
         @media screen and (min-width: 1200px) {
-            width: 170px;
+            flex-basis: calc((100%-150px) / 6);
     }
 }
 

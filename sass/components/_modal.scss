@@ -81,6 +81,10 @@
         padding: 11px 30px;
     
         @include animated(border);
+
+        @media screen and (max-width: 767px) {
+            padding: 11px 35px;
+        }
     }
 
     &__textarea {
